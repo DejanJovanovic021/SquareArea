@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>assignment 3</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            
+        </style>
+    </head>
+    
+    <body>
+        
+        
+        <script type="text/javascript">
+           
+            var a = prompt('Insert side "a":'); 
+            var b = prompt('Insert side "b":');
+            var c = prompt('Insert side "c":');
+            
+            try{
+                if(a <= 0){
+                    throw Error('"a" side must be greater than zero !');
+                }
+                else if(b <= 0){
+                    throw Error('"b" side must be greater than zero !');
+                }
+                else if(c <= 0){
+                    throw Error('"c" side must be greater than zero !');
+                }
+                else{
+                    
+                    function calculateArea(a, b, c){
+                        return 2*(a*b + a*c + b*c);
+                    }
+                    var area = calculateArea(a, b, c);
+                    
+                }
+                window.alert("The area of the cuboid is: " + area + " mm2");
+            }
+            catch(err){
+                console.log("Error name: " + err.name);
+                console.log("Error message: " + err.message);
+                window.alert("Error message: " + err.message);
+            }
+        </script>
+    </body>
+</html>
